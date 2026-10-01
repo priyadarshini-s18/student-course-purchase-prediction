@@ -1,0 +1,25 @@
+{
+  "features": [
+    "age",
+    "study_hours_per_week",
+    "previous_courses_completed",
+    "platform_visits_per_month",
+    "assignment_completion_rate"
+  ],
+  "accuracy": 0.8,
+  "precision": 0.8913,
+  "recall": 0.7321,
+  "f1": 0.8039,
+  "confusion_matrix": [
+    [
+      39,
+      5
+    ],
+    [
+      15,
+      41
+    ]
+  ],
+  "train_size": 400,
+  "test_size": 100
+}

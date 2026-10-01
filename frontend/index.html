@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course Purchase Prediction</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <h1>📚 Student Course Purchase Prediction</h1>
+    <p>Predict whether a student will buy a course from their learning behavior.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Predict</h2>
+      <form id="form">
+        <label>Age <input type="number" name="age" min="10" max="60" value="22" required></label>
+        <label>Study hours per week <input type="number" name="study_hours_per_week" min="0" max="50" value="16" required></label>
+        <label>Previous courses completed <input type="number" name="previous_courses_completed" min="0" max="20" value="3" required></label>
+        <label>Platform visits per month <input type="number" name="platform_visits_per_month" min="0" max="100" value="20" required></label>
+        <label>Assignment completion rate (%) <input type="number" name="assignment_completion_rate" min="0" max="100" value="75" required></label>
+        <button type="submit">Predict Purchase</button>
+      </form>
+      <div id="result" class="result hidden"></div>
+    </section>
+
+    <section class="card">
+      <h2>Model Performance</h2>
+      <div id="metrics" class="metrics">Loading...</div>
+    </section>
+
+    <section class="card wide">
+      <h2>What drives purchases?</h2>
+      <p class="muted">Correlation of each feature with buying a course.</p>
+      <div id="chart">Loading...</div>
+    </section>
+  </main>
+
+  <footer>Built with Python · scikit-learn · FastAPI · HTML/CSS/JS</footer>
+  <script src="/static/script.js"></script>
+</body>
+</html>
